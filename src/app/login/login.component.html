@@ -1,0 +1,70 @@
+
+<!-- app.component.html -->
+<!-- <div [class.out]="isOut" [class.in]="!isOut"> -->
+
+<div *ngIf="show; then ifblock else elseblock">
+  this is shown
+</div>
+
+<ng-template #ifblock>
+  <h1>if block</h1>
+</ng-template>
+
+
+<ng-template #elseblock>
+<h1>else condation</h1>
+</ng-template>
+
+
+<div [ngClass]="{'out': isOut, 'in': !isOut}">
+  This is a dynamically styled element
+</div>
+
+<button (click)="toggleInOut()">Toggle In/Out Class</button>
+
+<p>login works!</p>
+
+
+<div>
+    <h2>Contact Form 2</h2>
+    <form (ngSubmit)="submitForm()">
+      
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+
+<label for="message">Message:</label>
+<textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+<p>{{ responseMessage}}</p>
+<!-- <h1>{{khan}}</h1> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

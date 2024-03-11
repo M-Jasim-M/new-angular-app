@@ -1,0 +1,16 @@
+<!-- login2.component.html -->
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <!-- Your form controls go here -->
+    <label>
+      Username:
+      <input type="text" formControlName="username">
+    </label>
+    <br>
+    <label>
+      Password:
+      <input type="password" formControlName="password">
+    </label>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  

@@ -1,0 +1,9 @@
+/* app.component.css */
+.out {
+    background-color: red; /* Set your styles for the 'out' class */
+  }
+  
+  .in {
+    background-color: green; /* Set your styles for the 'in' class */
+  }
+  
